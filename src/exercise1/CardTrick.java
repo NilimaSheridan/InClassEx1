@@ -56,19 +56,20 @@ if(num==card.getValue() && str.equals(card.getSuit())){
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
         
-        System.out.println("My name is Paul, but you can call me prof, Paul or sir");
+        System.out.println("My name is Nilima, but you can call me Agent Nemo");
         System.out.println();
         
         System.out.println("My career ambitions:");
-        System.out.println("-- Be more active on LinkedIn");
+        System.out.println("-- To go places and reach better heights ");
         System.out.println("-- Have a semester with no violations of academic integrity!");
+	System.out.println("-- To successfully complete this program while I enjoy learning!")
 	System.out.println();	
 
         System.out.println("My hobbies:");
-        System.out.println("-- Investing");
+        System.out.println("-- Photography");
+	System.out.println("--Gardening");
         System.out.println("-- Cooking");
-        System.out.println("-- Reading/Watching TV");
-        System.out.println("-- Riding my motorcycle");
+        System.out.println("-- Driving or long drives");
 
         System.out.println();
         
