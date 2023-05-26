@@ -62,7 +62,7 @@ if(num==card.getValue() && str.equals(card.getSuit())){
         System.out.println("My career ambitions:");
         System.out.println("-- To go places and reach better heights ");
         System.out.println("-- Have a semester with no violations of academic integrity!");
-	System.out.println("-- To successfully complete this program while I enjoy learning!")
+	System.out.println("-- To successfully complete this program while I enjoy learning!");
 	System.out.println();	
 
         System.out.println("My hobbies:");
