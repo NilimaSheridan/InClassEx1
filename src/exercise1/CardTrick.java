@@ -14,11 +14,11 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] hand = new Card[7];
-Card card = new Card();
+        Card card = new Card();
         for (int i = 0; i < hand.length; i++) {
             
            card.setValue((int) Math.random());
-           card.setSuit(Card.SUITS(((Math.random().nextInt(4));
+           //card.setSuit(Card.SUITS(((Math.random().nextInt(4)))));
             //card.setValue(insert call to random number generator here)
             // 
             //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
