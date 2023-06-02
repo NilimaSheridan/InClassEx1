@@ -1,6 +1,7 @@
 package exercise1;
 
 import java.util.Scanner;
+import java.util.*;
 
 /**
  * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
@@ -8,6 +9,7 @@ import java.util.Scanner;
  * To be used as starting code in Exercise
  *
  * @author Nilima G May 26 2023.
+ *
  */
 public class CardTrick {
     
@@ -20,9 +22,9 @@ public class CardTrick {
             //       Don't worry about duplicates at this point
             
         Card[] hand = new Card[7];
-        Card card = new Card(String suit, int value);
+        
         for (int i = 0; i < hand.length; i++) {
-            
+            Card card = new Card();
            card.setValue((int) Math.random());
            
         }
@@ -40,10 +42,10 @@ public class CardTrick {
 System.out.print("Enter your guess value for card");
 int num = input.nextInt();
 System.out.println("Enter your guess for suit");
-String str =input.next();
-String suit_Name = card.SUITS[suit-1];
+int suit_value =input.nextInt();
+String suit_Name = Card.SUITS[suit_value-1];
 for(int guess = 0;guess<hand.length;guess++){
-    if(num==hand[guess].getValue() && str.equals(hand[guess].getSuit())){
+    if(num==hand[guess].getValue() && suit_Name.equals(hand[guess].getSuit())){
     CardTrick.printInfo();
 }
 
