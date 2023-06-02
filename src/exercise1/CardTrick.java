@@ -25,7 +25,7 @@ public class CardTrick {
         
         for (int i = 0; i < hand.length; i++) {
             Card card = new Card();
-           card.setValue((int) Math.random());
+           card.setValue((int) Math.random()*13+1);
            
         }
          // insert code to ask the user for Card value and suit, create their card
@@ -37,7 +37,10 @@ public class CardTrick {
         // Then loop through the cards in the array to see if there's a match.
         
         // If the guess is successful, invoke the printInfo() method below.
-        
+        Random random = new Random();
+        card.setSuit(Card.SUITS[random.nextInt(4)]);
+        hand[i] = card;
+    
         Scanner input = new Scanner(System.in);
 System.out.print("Enter your guess value for card");
 int num = input.nextInt();
@@ -57,6 +60,8 @@ for(int guess = 0;guess<hand.length;guess++){
      * replace this information with your own.
      * @author Paul Bonenfant Jan 2022
      */
+    
+    //I am Done
     private static void printInfo() {
     
         System.out.println("Congratulations, you guessed right!");
