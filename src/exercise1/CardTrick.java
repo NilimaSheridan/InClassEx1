@@ -12,29 +12,21 @@ import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args) {
-        
-        Card[] hand = new Card[7];
-        Card card = new Card();
-        for (int i = 0; i < hand.length; i++) {
-            
-           card.setValue((int) Math.random());
-           //card.setSuit(Card.SUITS(((Math.random().nextInt(4)))));
+      //card.setSuit(Card.SUITS(((Math.random().nextInt(4)))));
             //card.setValue(insert call to random number generator here)
             // 
             //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
             //       Don't worry about duplicates at this point
+            
+        Card[] hand = new Card[7];
+        Card card = new Card(String suit, int value);
+        for (int i = 0; i < hand.length; i++) {
+            
+           card.setValue((int) Math.random());
+           
         }
-        
-        Scanner input = new Scanner(System.in);
-System.out.print("Enter your guess value from 1 to 10");
-int num = input.nextInt();
-System.out.println("Enter you suit");
-String str =input.next();
-if(num==card.getValue() && str.equals(card.getSuit())){
-    printInfo();
-}
-        // insert code to ask the user for Card value and suit, create their card
+         // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
         // Hint: You can ask for values 1 to 10, and then
         //       11 for jack, 12 for queen, etc. (remember arrays are 0-based though)
@@ -44,7 +36,19 @@ if(num==card.getValue() && str.equals(card.getSuit())){
         
         // If the guess is successful, invoke the printInfo() method below.
         
-    }
+        Scanner input = new Scanner(System.in);
+System.out.print("Enter your guess value for card");
+int num = input.nextInt();
+System.out.println("Enter your guess for suit");
+String str =input.next();
+String suit_Name = card.SUITS[suit-1];
+for(int guess = 0;guess<hand.length;guess++){
+    if(num==hand[guess].getValue() && str.equals(hand[guess].getSuit())){
+    CardTrick.printInfo();
+}
+
+}
+       }
 
     /**
      * A simple method to print out personal information. Follow the instructions to 
